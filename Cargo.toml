@@ -1,0 +1,11 @@
+[package]
+name = "text_styler"
+description = "Terminal text painter and styler"
+authors = ["ryanv404"]
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/ryanv404/text_styler"
+keywords = ["ansi", "terminal", "colors"]
+categories = ["command-line-interface"]
