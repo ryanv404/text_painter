@@ -3,8 +3,6 @@ use text_styler::{print_style, println_style};
 fn main() {
     let total_cols = 80;
     for col in 0..total_cols {
-        let col = col as u32;
-
         let r = 255 - (col * 255 / total_cols);
         let r: u8 = r.try_into().unwrap();
 
@@ -22,11 +20,7 @@ fn main() {
                 " "
             );
         } else {
-            print_style!(
-                rgb(r, g, b),
-                on_rgb(255 - r, 255 - g, 255 - b),
-                " "
-            );
+            print_style!(rgb(r, g, b), on_rgb(255 - r, 255 - g, 255 - b), " ");
         }
     }
 }

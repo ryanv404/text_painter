@@ -1,12 +1,13 @@
 use std::fmt;
 
 /// Represents text attribute options.
-#[derive(Clone, Copy)]
+#[derive(Clone, Debug)]
 pub enum Attr {
     Bold,
     Dim,
     Italics,
-    Underlined,
+    Underline,
+    Blink,
     Inverted,
     Hidden,
     Strike,
@@ -14,14 +15,17 @@ pub enum Attr {
 
 impl fmt::Display for Attr {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            Self::Bold => write!(f, "1"),
-            Self::Dim => write!(f, "2"),
-            Self::Italics => write!(f, "3"),
-            Self::Underlined => write!(f, "4"),
-            Self::Inverted => write!(f, "7"),
-            Self::Hidden => write!(f, "8"),
-            Self::Strike => write!(f, "9"),
-        }
+        write!(f, "{}",
+            match *self {
+                Self::Bold      => 1,
+                Self::Dim       => 2,
+                Self::Italics   => 3,
+                Self::Underline => 4,
+                Self::Blink     => 5,
+                Self::Inverted  => 7,
+                Self::Hidden    => 8,
+                Self::Strike    => 9,
+           }
+        )
     }
 }

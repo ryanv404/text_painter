@@ -23,7 +23,7 @@ fn main() {
                     on_color256(num),
                     &format!(" {:03} ", num)
                 );
-            }
+            },
         }
     }
 
@@ -48,7 +48,7 @@ fn main() {
                     on_color256(num),
                     &format!(" {:03} ", num)
                 );
-            }
+            },
         }
     }
 
@@ -73,7 +73,7 @@ fn main() {
                     on_color256(num),
                     &format!(" {:03} ", num)
                 );
-            }
+            },
         }
     }
 
@@ -98,7 +98,7 @@ fn main() {
                     on_color256(num),
                     &format!(" {:03} ", num)
                 );
-            }
+            },
         }
     }
 
@@ -131,7 +131,7 @@ fn main() {
                     on_color256(num),
                     &format!(" {:03} ", num)
                 );
-            }
+            },
         }
     }
 }
